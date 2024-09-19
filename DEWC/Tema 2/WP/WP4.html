@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write('hola'); 
+        var str=document.getElementById('cadena');
+        for (const p in str) {
+            if (Object.prototype.hasOwnProperty.call(str, p)) {
+                const element = str[p];
+                document.write('hola');
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="cadena">ejemplo</p>
+    
+</body>
+</html>
