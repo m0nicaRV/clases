@@ -1,0 +1,52 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+h1,
+h4,
+p {
+  margin: 0px;
+}
+
+body {
+  background-color: white;
+  display: flex;
+}
+.container {
+  color: #666666;
+  font-family: "Lobster", cursive;
+  margin: 20px auto;
+  width: 90%;
+}
+
+main{
+  border: 1px solid #aaaaaa;
+  border-radius: 1em;
+  height: 400px;
+  padding: 1em;
+  width: 54%;
+  text-align: center;
+}
+main img{
+  border-radius: 1em;
+  height: 70%;
+  width: 80%;
+}
+img{
+  width: 50px;
+} 
+
+.articles{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+}
+article{
+  border: 1px solid #aaaaaa;
+  border-radius: 1em;
+  height: 300px;
+  padding: 1em;
+  width: 32%;
+  text-align: center;
+}
+

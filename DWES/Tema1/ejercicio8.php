@@ -2,5 +2,5 @@
 $a= 12.7 <=> 12.7;
 echo "$a\n";
 
-$b="cha"<=>"chi";
+$b="charlie"<=>"cob";
 echo "$b\n";

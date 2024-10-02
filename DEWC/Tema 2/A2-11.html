@@ -13,6 +13,12 @@
                 contador++;
             }
         }
+
+        function miFuncion(par,indice,arr){
+            document.write("</br> + Parafo "+(indice+1)+": "+par.textContent+"</br>");
+        }
+        var arrayEtiquetas=Array.from(etiquetas);
+        arrayEtiquetas.forEach(miFuncion);
     </script>
 </head>
 <body>
