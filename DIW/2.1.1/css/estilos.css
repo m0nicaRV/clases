@@ -7,7 +7,15 @@ h4,
 p {
   margin: 0px;
 }
-
+header{
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 2%;
+}
+nav{
+  padding: 2%;
+  gap: 10px;
+}
 body {
   background-color: white;
   display: flex;
@@ -19,13 +27,16 @@ body {
   width: 90%;
 }
 
+
 main{
   border: 1px solid #aaaaaa;
   border-radius: 1em;
-  height: 400px;
+  height: 350px;
   padding: 1em;
-  width: 54%;
+  width: 45%;
   text-align: center;
+  margin-left: 200PX;
+  margin-bottom:10px;
 }
 main img{
   border-radius: 1em;
@@ -48,5 +59,48 @@ article{
   padding: 1em;
   width: 32%;
   text-align: center;
+  margin-bottom: 20px;
 }
 
+.content_wrapper{
+  display: flex;
+  margin-top: 20px;
+  
+}
+
+.content_wrapper article{
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  min-height: 350px;
+  margin-left: 20px;
+}
+
+.articles img {
+  width: 450px;
+  height: 180px;
+}
+
+article  img {
+  width: 500px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+footer{
+  border-top: 2px solid black;
+  display: flex;  
+}
+
+.social{
+ gap:10px;
+}
+
+.copyright{
+  flex:1;
+  text-align: center;
+}
