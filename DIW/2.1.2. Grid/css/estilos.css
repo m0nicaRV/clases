@@ -56,7 +56,7 @@ main {
   text-align: center;
   width: 90%;
   grid-row: 2/3;
-  grid-column: 2/3;
+  grid-column: 2/4;
 }
 
 main img {
@@ -72,9 +72,23 @@ article {
   padding: 1em;
   text-align: center;
 }
-#1{
+#c1{
   grid-row: 2/3;
-  grid-column: 3/5;
+  grid-column: 4/5;
+}
+#c2{
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+ 
+#c3{
+  grid-row: 3/3;
+  grid-column: 3/4;
+}
+
+#c4{
+  grid-row: 3/3;
+  grid-column: 4/5;
 }
 
 article img {
@@ -95,7 +109,8 @@ footer {
   align-items: center;
   border-top: 1px solid #666666;
   display: flex;
- 
+  grid-row: 4/4;
+  grid-column: 1/5;
   justify-content: space-between;
   padding: 2em;
 }
