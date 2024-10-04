@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Ejemplo aprenderaprogramar.com</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      window.onload = function () {
+        var elementosInput = document.getElementsByTagName("input"); //Elementos input
+        var elementosSelect = document.getElementsByTagName("select");
+        var arrayNodos = [];
+        addNodeListToArray(elementosInput, arrayNodos);
+        addNodeListToArray(elementosSelect, arrayNodos);
+
+        alert(
+          "Tenemos un número de elementos input ó select en el formulario: " +
+            arrayNodos.length
+        );
+      };
+
+      function addNodeListToArray(elNodeList, elArray) {
+        for (var i = 0; i < elNodeList.length; i++) {
+          var elementoActual = elNodeList[i];
+          elArray.push(elementoActual);
+        }
+        alert("Añadidos " + elNodeList.length + " elementos");
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>Cursos aprenderaprogramar.com</h2>
+    <h3>Ejemplos JavaScript</h3>
+    <div class="estiloForm">
+      <form name="formularioContacto" method="get" action="#">
+        <label>Tratamiento</label>
+        <input type="radio" name="tratamiento" id="tratarSr" value="Sr." />Sr.
+        <input
+          type="radio"
+          name="tratamiento"
+          id="tratarSra"
+          value="Sra."
+        />Sra.<br />
+
+        <label>Nombre</label>
+        <input id="nombre" name="nombre" type="text" /><br />
+
+        <label>Apellidos</label>
+        <input id="apellidos" name="apellidos" type="text" /><br />
+
+        <label>Dirección</label>
+        <input id="direccion1" name="direccion1" type="text" /><br />
+
+        <label>Ciudad</label>
+        <select id="ciudad" name="ciudad">
+          <option value="">Elija opcion</option>
+          <option value="Mexico">Mexico D.F. (MX)</option>
+          <option value="Madrid">Madrid (ES)</option>
+          <option value="Santiago">Santiago (CL)</option></select
+        ><br />
+
+        <label>Preferencias</label>
+        <input name="Libros" type="checkbox" />Libros
+        <input name="Peliculas" type="checkbox" />Peliculas
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Cancelar" />
+      </form>
+    </div>
+  </body>
+</html>
