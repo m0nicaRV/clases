@@ -67,6 +67,20 @@
       document.write("true | 0 => "+(true | 0 )+ "<br/>");
       
 
+      document.write(
+        "EVITANDO COERCION DE TIPOS____________________________________________<br/>"
+      );
+      document.write("'180'+200+3 =>"+('180'+200+3)+ "<br/>");
+      document.write("'hola'++'mundo' => holaNaN <br/>");
+      document.write("!+[]+[]+![] =>"+(!+[]+[]+![])+ "<br/>");
+      document.write("if 'true'== true =>"+('true'== true)+ "<br/>");
+      document.write("if 'true' =>"+('true')+ "<br/>");
+      document.write("if !!'false'==!!'true' =>"+( !!'false'==!!'true')+ "<br/>");
+      document.write("if 0 => false <br/>");
+      document.write("if 38 => true <br/>");
+
+
+      
 
 
 
