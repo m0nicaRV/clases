@@ -63,21 +63,61 @@
       document.write("+123 =>"+(+123)+ "<br/>");
       document.write("123 != '123' =>"+(123 != '123' )+ "<br/>");
       document.write("4 > '5' => "+(4 > '5' )+ "<br/>");
-      document.write("5/null => "+(5/null )+ "<br/>");
+      document.write("5 / null => "+(5/null )+ "<br/>");
       document.write("true | 0 => "+(true | 0 )+ "<br/>");
       
 
       document.write(
         "EVITANDO COERCION DE TIPOS____________________________________________<br/>"
       );
-      document.write("'180'+200+3 =>"+('180'+200+3)+ "<br/>");
-      document.write("'hola'++'mundo' => holaNaN <br/>");
-      document.write("!+[]+[]+![] =>"+(!+[]+[]+![])+ "<br/>");
-      document.write("if 'true'== true =>"+('true'== true)+ "<br/>");
+      document.write("'180' + 200 + 3 =>"+('180'+200+3)+ "<br/>");
+      document.write("'hola' ++ 'mundo' => holaNaN <br/>");
+      document.write("! + [] + [] + ![] =>"+(!+[]+[]+![])+ "<br/>");
+      document.write("if 'true' == true =>"+('true'== true)+ "<br/>");
       document.write("if 'true' =>"+('true')+ "<br/>");
-      document.write("if !!'false'==!!'true' =>"+( !!'false'==!!'true')+ "<br/>");
+      document.write("if !!'false' == !!'true' =>"+( !!'false'==!!'true')+ "<br/>");
       document.write("if 0 => false <br/>");
       document.write("if 38 => true <br/>");
+      document.write("0 == [] => "+(0==[])+" |  ");
+      document.write("0 === [] => "+(0=== [])+" <br/>");
+      document.write("0 == '' => "+(0=='')+" |  ");
+      document.write("0 === '' => "+(0==='')+" <br/>");
+      document.write("1 == true => "+(1==true)+" |  ");
+      document.write("1 === true => "+(1===true)+" <br/>");
+      document.write("1!='1' => "+(1!='1')+" |  ");
+      document.write("1! == '1' => "+(1!=='1')+" <br/>");
+      document.write("1! = true => "+(1!=true)+" |  ");
+      document.write("1! == true => "+(1!==true)+" <br/>");
+
+      document.write(
+        "OPERADORES Y EXPRESIONES____________________________________________<br/>"
+      );
+      document.write("<strong> operaciones con operadores binarios </strong> <br/>");
+      document.write("5 * 6 => "+(5*6)+" |  ");
+      document.write("73 - 38 => "+(73-38)+" <br/>");
+      document.write("<strong> operaciones con operadores unarios </strong> <br/>");
+      document.write("10++ => 11 |  ");
+      document.write("!10 => "+(!10)+" <br/>");
+
+      document.write("<strong> operadores de comparacion</strong> <br/>");
+      document.write("'1' == 1 => "+('1'==1)+" <br/>");
+      document.write("'2' != 1 => "+('2'!=1)+" <br/>");
+      document.write("'1'=== 1 => "+('1'===1)+" <br/>");
+      document.write("'1' !== 1 => "+('1'!==1)+" <br/>");
+      document.write("'2' <= 2 => "+('2'<=2)+" <br/>");
+      document.write("2 > 3 => "+(2>3)+" <br/>");
+      document.write("<strong> operadores de asignacion</strong> <br/>");
+      let x=1;
+      let Y=3;
+      document.write("x += y => x = x + y =>"+(x += y)+" <br/>");
+      document.write("x %= y => x = x % y => "+(x %= y)+" <br/>");
+      document.write("x **= y => x = x ** y =>"+(x **= y)+" <br/>");
+      document.write("x &&= y => x && (x = y) =>"+(x&&=y)+" <br/>");
+      document.write("x ||= y =>x || (x = y) => "+(x||=y)+" <br/>");
+      document.write("2 > 3 => "+(2>3)+" <br/>");
+
+
+
 
 
       
