@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.write(
+        "TIPOS DE DATOS____________________________________________<br/>"
+      );
+      let variable;
+      document.write("LET VARIABLE =>" + typeof variable + "<br/>");
+
+      variable = 25;
+      document.write("VARIABLE : 25 =>" + typeof variable + "<br/>");
+
+      variable = new Date();
+      document.write("VARIABLE : NEW DATE() =>" + typeof variable + "<br/>");
+
+      variable = "HOLA";
+      document.write("VARIABLE : HOLA =>" + typeof variable + "<br/>");
+
+      variable = () => {};
+      document.write("VARIABLE : () =>{} =>" + typeof variable + "<br/>");
+
+      document.write(
+        "COERCION TIPO STRING____________________________________________<br/>"
+      );
+
+      document.write("String(123) =>" + String(123) + "<br/>");
+      document.write("String(-14.4) =>" + String(-14.4) + "<br/>");
+      document.write("String(null) =>" + String(null) + "<br/>");
+      document.write("String(undefined) =>" + String(undefined) + "<br/>");
+      document.write("String(false) =>" + String(false) + "<br/>");
+
+      document.write(
+        "COERCION TIPO Boolean____________________________________________<br/>"
+      );
+
+      document.write("Boolean('') =>" + Boolean("") + "<br/>");
+      document.write("Boolean(0) =>" + Boolean(0) + "<br/>");
+      document.write("Boolean(-0) =>" + Boolean(-0) + "<br/>");
+      document.write("Boolean(NaN) =>" + Boolean(NaN) + "<br/>");
+      document.write("Boolean(null) =>" + Boolean(null) + "<br/>");
+      document.write("Boolean(undefined) =>" + Boolean(undefined) + "<br/>");
+      document.write("Boolean(false) =>" + Boolean(false) + "<br/>");
+
+
+      document.write(
+        "COERCION TIPO Number____________________________________________<br/>"
+      );
+      document.write("Number(null) =>" + Number(null) + "<br/>");
+      document.write("Number(undefined) =>" +Number(undefined) + "<br/>");
+      document.write("Number(false) =>" + Number(false) + "<br/>");
+      document.write("Number(true) =>" + Number(true) + "<br/>");
+
+      document.write("Number('10') =>" + Number("10") + "<br/>");
+      document.write("Number('29.45') =>" + Number("29.45") + "<br/>");
+      document.write("Number('\n') =>" + Number("\n") + "<br/>");
+      document.write("Number('28s') =>" + Number('28s') + "<br/>");
+      document.write("Number(123) =>" + Number(123) + "<br/>");
+
+      document.write("+123 =>"+(+123)+ "<br/>");
+      document.write("123 != '123' =>"+(123 != '123' )+ "<br/>");
+      document.write("4 > '5' => "+(4 > '5' )+ "<br/>");
+      document.write("5/null => "+(5/null )+ "<br/>");
+      document.write("true | 0 => "+(true | 0 )+ "<br/>");
+      
+
+
+
+
+
+      
+    </script>
+  </head>
+  <body></body>
+</html>
