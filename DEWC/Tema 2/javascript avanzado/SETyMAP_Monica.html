@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET Y MAP</title>
+    <script>
+
+        //SET ==> array que no permite valores duplicados 
+        const setEjemplo= new Set([2, 3, 3, 2]); //[2 , 3]
+
+        setEjemplo.has(2); // true -> setEjemplo contiene 2
+        setEjemplo.has(1);// false -> setEjemplo  no contiene 1
+
+        setEjemplo.add(2); //no se añade 2 porque ya esta -> [2 , 3] 
+        setEjemplo.add(1); //[2 , 3, 1]
+
+        setEjemplo.delete(2); //[ 3, 1]
+
+        const newObj={};
+        const otherObj={};
+
+        setEjemplo.add(newObj);//[ 3, 1, {}]
+        setEjemplo.add(newObj);//[ 3, 1, {}]
+        setEjemplo.add(otherObj);//[ 3, 1, {}, {}]
+
+
+        //MAP ==> arrays con clave valor 
+        const mapEjemplo= new Map([['a',1],['b',4]]);
+
+        mapEjemplo.has('a'); //true porque mapEjemplo contiene a
+        mapEjemplo.has('c'); //false porque mapEjemplo no contiene c
+
+        mapEjemplo.set('c'); // {a:1 , b:4,  c:5}
+        mapEjemplo.get('c'); // el valor de c -> 5
+
+        mapEjemplo.delete('a'); //{ b:4,  c:5}
+
+        const newObjMap={};
+      
+
+        mapEjemplo.set(newObj,5);//{ b:4,  c:5 , ref:5}
+        mapEjemplo.delete({}); //{ b:4,  c:5 , ref:5}
+        mapEjemplo.delete (otherObj); //{ b:4,  c:5 }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
