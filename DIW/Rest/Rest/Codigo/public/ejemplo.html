@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de imágenes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: 0.5s;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Botones de navegación */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Indicadores */
+        .dots {
+            text-align: center;
+            padding: 10px;
+            background: #ddd;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin: 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel-container">
+    <div class="slides">
+        <div class="slide">
+            <img src="https://via.placeholder.com/1000x400/ff7f7f/333333?text=Imagen+1" alt="Imagen 1">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/1000x400/7f7fff/333333?text=Imagen+2" alt="Imagen 2">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/1000x400/7fff7f/333333?text=Imagen+3" alt="Imagen 3">
+        </div>
+    </div>
+
+    <!-- Botones de navegación -->
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<!-- Indicadores -->
+<div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides(slideIndex);
+
+    function changeSlide(n) {
+        slideIndex += n;
+        showSlides(slideIndex);
+    }
+
+    function currentSlide(n) {
+        slideIndex = n - 1;
+        showSlides(slideIndex);
+    }
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n >= slides.length) {
+            slideIndex = 0;
+        } 
+        if (n < 0) {
+            slideIndex = slides.length - 1;
+        }
+
+        // Ocultar todas las diapositivas
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        // Quitar clase "active" de todos los puntos
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        // Mostrar la diapositiva actual
+        slides[slideIndex].style.display = "block";
+        dots[slideIndex].className += " active";
+    }
+
+    // Muestra la primera diapositiva al cargar
+    document.addEventListener("DOMContentLoaded", () => {
+        showSlides(slideIndex);
+    });
+</script>
+
+</body>
+</html>
