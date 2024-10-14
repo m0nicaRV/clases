@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //---------------------ESCAPE() Y UNESCAPE()----------------------------------
+        var input= prompt("Introduce una cadena para encodeURI");
+        var inputCodificado = encodeURI(input);
+        document.write("Cadena codificada con encodeURI: "+inputCodificado+"<br/>");
+
+        var input= prompt("Introduce una cadena para decodeURI");
+        var inputCodificado = decodeURI(input);
+        document.write("Cadena codificada con decodeURI: "+inputCodificado +"<br/>");
+
+        var input= prompt("Introduce una cadena para escape");
+        var inputCodificado = escape(input);
+        document.write("Cadena codificada con escape: "+inputCodificado+"<br/>");
+
+        var input= prompt("Introduce una cadena para unescape");
+        var inputCodificado = unescape(input);
+        document.write("Cadena codificada con unescape: "+inputCodificado+"<br/>");
+
+
+
+        //---------------------EVAL()----------------------------------
+        var input=prompt("introduce una operacion numerica");
+        var resultado=eval(input);
+        document.write("el resultado de la operacion con eval() es: "+resultado+"<br/>");
+
+
+        //---------------------IsFinite()----------------------------------
+        var input=prompt("introduce una operacion numerica");
+        if(isFinite(eval(input))){
+            document.write("la operacion que has introducido es finito <br/>");
+        }else{
+            document.write("la operacion que has introducido es infinito <br/>");
+        }
+            
+         
+        //---------------------IsNan()----------------------------------
+        var input=prompt("introduce un valor numerico");
+        if(isNaN(input)){
+             document.write("no es numerico <br/> ");
+        }else{
+           document.write("es numerico <br/> "); 
+        }
+            
+
+
+        //---------------------IsNaN()----------------------------------
+        var fecha=new Date();
+        var fechaString=String(fecha);
+        document.write("la fecha pasada por un string() : " + fechaString+"<br/>");
+        
+        
+        //---------------------ParseInt()----------------------------------
+        var input=prompt("introduce un valor");
+        var inputParsed= parseInt(input);
+        document.write("parseInt("+input+"):"+inputParsed+"<br/>");
+
+
+        //---------------------ParseFloat()----------------------------------
+        var input=prompt("introduce un valor");
+        var inputParsed= parseFloat(input);
+        document.write("parseFloat("+input+"):"+inputParsed+"<br/>");
+
+         
+
+    
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

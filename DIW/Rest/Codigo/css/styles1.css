@@ -6,6 +6,7 @@
 
 body {
   font-family: "Lato", sans-serif; /* Aplicar fuente Lato */
+  background-color: rgba(142, 160, 118, 0.5); 
 }
 
 .navbar {
@@ -17,8 +18,19 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el logo y el texto */
+  gap: 16px;
   color: white;
-  font-size: 24px;
+}
+
+.logo img {
+  height: 50px; 
+}
+
+.logo span {
+  color: white; 
+  font-size: 24px; 
 }
 
 .nav-list {
@@ -171,6 +183,18 @@ body {
     backdrop-filter: blur(5px); /* Efecto de desenfoque */
   }
 
+  .txt{
+    height: 15vh !important;
+    font-size: 9px !important;  
+  }
+
+  .booking p{
+    font-size: 12px !important;  
+  }
+
+
+
+
   .nav-list.active {
     display: flex; /* Muestra la lista al hacer clic en el menú hamburguesa */
   }
@@ -193,6 +217,7 @@ body {
 }
 
 .txt {
+  font-size: 25px;
   flex: 0 0 35%; /* Aumenta el tamaño del texto al 35% */
   padding: 10px; /* Espaciado interno */
   background-color: rgba(142, 160, 118, 0.5); /* Fondo verde semitransparente */
@@ -200,9 +225,8 @@ body {
   margin-left: 25px; /* Margen a la derecha para separar del contenedor de la imagen */
   text-align: center;
   justify-content: center;
-  border-radius: 5px; /* Bordes redondeados */
   width: 80px;
-  height: 250px;
+  height: 30vh;
   color: #564734; 
   display: flex;
   align-items: center;
@@ -221,4 +245,23 @@ body {
 
 .txt p{
   align-items: center;
+ 
+}
+
+.booking img{
+ height: 15%;
+ padding: 10px;
+}
+.booking{
+  background-color: #848484;
+  margin-bottom: 20px;
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.booking p{
+  font-size: xx-large;
+  text-align: center;
 }

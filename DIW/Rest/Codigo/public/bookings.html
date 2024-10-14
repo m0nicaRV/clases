@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Posada de Laurel</title>
+    <link rel="stylesheet" href="../css/styles3.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../assets/Posada.png" type="image/png">
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/Posada.png" alt="La Posada de Laurel" />
+        <span class="logo-text">La Posada de Laurel</span>
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Gastronomy</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+      </ul>
+    </nav>
+
+    <br />
+
+    <div class="form-container">
+      <h2>Book a table</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="nombre">Name:</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="apellido">Surname:</label>
+          <input type="text" id="apellido" name="apellido" required />
+        </div>
+        <div class="form-group">
+          <label for="telefono">Phone:</label>
+          <input type="tel" id="telefono" name="telefono" required />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="comensales">Number of diners:</label>
+          <input
+            type="number"
+            id="comensales"
+            name="comensales"
+            min="1"
+            max="20"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="fecha">Date of the booking:</label>
+          <input type="date" id="fecha" name="fecha" required />
+        </div>
+        <div class="form-group">
+          <label for="hora">Hour of the booking:</label>
+          <input type="time" id="hora" name="hora" required />
+        </div>
+        <button type="submit" class="submit-btn">Reservar</button>
+      </form>
+    </div>
+
+    <br />
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="sitemap">
+          <h4>Web Map</h4>
+          <ul>
+            <li><a href="index.html">Gastronomy</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+          </ul>
+        </div>
+        <div class="contact-info">
+          <h4>Contact</h4>
+          <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+          <p>Direction: C. Carretera, 3, 26589 Préjano, La Rioja</p>
+          <p>
+            <a href="https://www.instagram.com/tu_cuenta" target="_blank"
+              >Follow us on Instagram!</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 La Posada de Laurel. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>

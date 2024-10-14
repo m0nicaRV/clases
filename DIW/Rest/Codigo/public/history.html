@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Posada de Laurel</title>
+    <link rel="stylesheet" href="../css/styles4.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../assets/Posada.png" type="image/png" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/Posada.png" alt="La Posada de Laurel" />
+        <span class="logo-text">La Posada de Laurel</span>
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Gastronomy</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+      </ul>
+    </nav>
+
+    <div class="foto1">
+      <div class="content-box">
+        <h1>Dishes that tell stories</h1>
+        <br />
+        <p>
+          The enormous bicentennial laurel that residents and visitors find at
+          the entrance to Préjano gives its name to the restaurant where chef
+          Dámaso Navajas serves. In fact, 'La Posada del Laurel' is located
+          practically in the shadow of it, on the slopes of Peña Isasa and
+          Peñalmonte, in an enclave with beautiful views. Calm thus invades an
+          establishment equipped with a porch, terrace, garden and orchard, as
+          well as a fireplace for when necessary, where vegetables, fish and
+          meats are grilled, where wine takes center stage and where bites as
+          simple as pan-fried snails and wood-fired peppers.
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="foto2">
+      <div class="carousel-box">
+        <h2>Image Gallery</h2>
+        <br />
+        <div class="carousel">
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+          <div class="carousel-images">
+            <img
+              src="../assets/Comida1.jpg"
+              class="slide"
+            />
+            <img
+              src="../assets/Comida2.jpg"
+              class="slide"
+            />
+            <img
+              src="../assets/Entrada.PNG"
+              class="slide"
+            />
+            <img src="../assets/posada.jpg" class="slide" />
+            <img src="../assets/chef.png" class="slide" />
+          </div>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="sitemap">
+          <h4>Web Map</h4>
+          <ul>
+            <li><a href="index.html">Gastronomy</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+          </ul>
+        </div>
+        <div class="contact-info">
+          <h4>Contact</h4>
+          <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+          <p>Direction: C. Carretera, 3, 26589 Préjano, La Rioja</p>
+          <p>
+            <a href="https://www.instagram.com/tu_cuenta" target="_blank"
+              >Follow us on Instagram!</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 La Posada de Laurel. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>
