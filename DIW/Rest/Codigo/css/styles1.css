@@ -191,6 +191,9 @@ body {
   .booking p{
     font-size: 12px !important;  
   }
+  .booking img{
+    height: 80px !important;
+  }
 
 
 
@@ -249,7 +252,7 @@ body {
 }
 
 .booking img{
- height: 15%;
+ height: 150px;
  padding: 10px;
 }
 .booking{
@@ -265,3 +268,16 @@ body {
   font-size: xx-large;
   text-align: center;
 }
+hr{
+  border: solid 1px  #564734; 
+  width: 80%;
+   margin-top: 1vh; 
+   margin-bottom: 1vh;
+}
+.container a{
+  color:#564734 ;
+}
+.container a:hover{
+  color: white;
+}
+
