@@ -1,4 +1,0 @@
-- Pasar a ingles el footer
-- Pasar a ingles la carta
-- Ultima pag
-- Meter enlaces

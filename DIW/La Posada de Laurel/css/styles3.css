@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif; /* Aplicar fuente Lato */
+  background-image: url('../assets/forest.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3e2723; /* Marrón oscuro */
+  padding: 15px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el logo y el texto */
+  gap: 16px;
+  color: white;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo span {
+  color: white;
+  font-size: 24px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white; /* Texto en blanco */
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: #d7ccc8; /* Color de hover */
+}
+
+/* Estilos del menú hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white; /* Barras en blanco */
+  margin: 4px 0;
+}
+
+.footer {
+  background-color: #3e2723; /* Marrón oscuro */
+  color: white; /* Texto en blanco */
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px; /* Limitar el ancho del footer */
+  margin: 0 auto; /* Centrar el footer */
+  padding: 0 20px; /* Espaciado en los laterales */
+}
+
+.sitemap,
+.contact-info {
+  width: 45%; /* Ajustar el ancho de los elementos */
+}
+
+.sitemap h4,
+.contact-info h4 {
+  margin-bottom: 10px;
+}
+
+.sitemap ul {
+  list-style: none; /* Sin viñetas */
+  padding: 0;
+}
+
+.sitemap li {
+  margin: 5px 0; /* Espaciado entre enlaces */
+}
+
+.sitemap a {
+  text-decoration: none;
+  color: white; /* Texto en blanco */
+  transition: color 0.3s;
+}
+
+.sitemap a:hover {
+  color: #d7ccc8; /* Color de hover */
+}
+
+.contact-info a {
+  color: white; /* Texto en blanco */
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #d7ccc8; /* Color de hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea superior */
+  margin-top: 20px; /* Espaciado entre contenido y footer inferior */
+}
+
+.article-card {
+  width: 300px;
+  border: 2px solid #3e2723; /* Borde marrón oscuro */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card:hover {
+  transform: translateY(-5px); /* Efecto al pasar el mouse */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra en hover */
+}
+
+.article-link {
+  text-decoration: none;
+  color: inherit; /* Mantener el color del texto */
+}
+
+.article-image {
+  width: 100%;
+  height: 180px; /* Ajusta la altura según tus preferencias */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+.article-content {
+  padding: 15px;
+  background-color: #3e2723; /* Fondo marrón oscuro */
+  color: white; /* Texto en blanco */
+}
+
+.article-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.article-description {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.form-container {
+  background-color: rgba(142, 160, 118, 0.7);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto; /* Centrará el formulario en su contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+}
+
+.form-group input[type="date"],
+.form-group input[type="time"] {
+  color: #333;
+}
+
+.form-group input:focus {
+  outline: none;
+  border: 2px solid #333;
+}
+
+.submit-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: rgba(
+      128,
+      128,
+      128,0.8); 
+    backdrop-filter: blur(5px);
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .nav-list.active {
+    display: flex; /* Muestra la lista al hacer clic en el menú hamburguesa */
+    /* Agrega espaciado entre los elementos */
+    gap: 20px; /* Espaciado entre los elementos de la lista */
+  }
+
+  .nav-list li {
+    /* Aumenta el tamaño de la fuente para los elementos */
+    font-size: 18px; /* Ajusta el tamaño de la fuente */
+  }
+
+  .menu-toggle {
+    display: flex; /* Muestra el menú hamburguesa */
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+  .submit-btn {
+    padding: 8px;
+  }
+}

@@ -6,10 +6,7 @@
 
 body {
   font-family: "Lato", sans-serif; /* Aplicar fuente Lato */
-  background-image: url('../assets/tree.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: rgba(142, 160, 118, 0.5); 
 }
 
 .navbar {
@@ -129,101 +126,61 @@ body {
 }
 
 .article-card {
-  width: 300px;
-  border: 2px solid #3e2723; /* Borde marrón oscuro */
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+    border: 2px solid #3E2723; /* Borde marrón oscuro */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .article-card:hover {
-  transform: translateY(-5px); /* Efecto al pasar el mouse */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra en hover */
+    transform: translateY(-5px); /* Efecto al pasar el mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra en hover */
 }
 
 .article-link {
-  text-decoration: none;
-  color: inherit; /* Mantener el color del texto */
+    text-decoration: none;
+    color: inherit; /* Mantener el color del texto */
 }
 
 .article-image {
-  width: 100%;
-  height: 180px; /* Ajusta la altura según tus preferencias */
-  object-fit: cover; /* Mantiene la proporción de la imagen */
+    width: 100%;
+    height: 180px; /* Ajusta la altura según tus preferencias */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
 }
 
 .article-content {
-  padding: 15px;
-  background-color: #3e2723; /* Fondo marrón oscuro */
-  color: white; /* Texto en blanco */
+    padding: 15px;
+    background-color: #3E2723; /* Fondo marrón oscuro */
+    color: white; /* Texto en blanco */
 }
 
 .article-title {
-  font-size: 24px;
-  margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .article-description {
-  font-size: 16px;
-  margin-bottom: 0;
-}
-
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  color: white;
-}
-
-.section {
-  background-color: rgba(142, 160, 118, 0.7); /* Verde claro y transparente */
-  padding: 15px; /* Reducido para hacer el recuadro más pequeño */
-  margin: 15px; /* Aumentado para más espacio entre secciones */
-  flex: 1 1 calc(40% - 30px); /* Dos columnas y un tamaño un poco más pequeño */
-  box-sizing: border-box;
-}
-
-.section-brown {
-  background-color: rgba(62, 39, 35, 0.8); /* Marrón transparente */
-}
-
-.watchout{
-  color: white;
-  font-weight: bold;
-  margin: 10px;
-}
-
-ul {
-  list-style-type: none; /* Sin puntos */
-  padding: 0; /* Sin padding */
-}
-
-li {
-  margin: 10px 0; /* Espacio entre platos */
-}
-
-.price {
-  font-weight: bold; /* Negrita para el precio */
-  float: right; /* Precio a la derecha */
+    font-size: 16px;
+    margin-bottom: 0;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  /*body {
-    background-color: rgba(128, 128, 128, 0.8) ;
-    background-image: none;
-  }*/
-
   .nav-list {
-    display: none; /* Oculta la lista de navegación */
+    display: none;
     flex-direction: column;
     width: 100%;
-    height: 18vh;
     position: absolute;
-    top: 60px;
+    top: 80px;
     left: 0;
-    background-color: rgba(128, 128, 128, 0.8);
-    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    background-color: rgba(
+      128,
+      128,
+      128,0.8); 
+    backdrop-filter: blur(5px);
+    font-size: 30px;
+    text-align: center;
   }
 
   .nav-list.active {
@@ -237,12 +194,95 @@ li {
     font-size: 18px; /* Ajusta el tamaño de la fuente */
   }
 
+  .txt{
+    height: 15vh !important;
+    font-size: 9px !important;  
+  }
+
+  .booking p{
+    font-size: 12px !important;  
+  }
+
   .menu-toggle {
     display: flex; /* Muestra el menú hamburguesa */
   }
 
-  .section {
-    flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+  .booking img{
+    height: 80px !important;
   }
-
 }
+
+.container {
+  display: flex; /* Usamos flex para el contenedor principal */
+  flex-direction: column; /* Colocamos los elementos en columnas */
+}
+
+.izq, .dch {
+  display: flex; /* Flex para los contenedores internos */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente */
+  margin: 10px 0; /* Margen vertical entre filas */
+}
+
+.txt {
+  font-size: 25px;
+  flex: 0 0 35%; /* Aumenta el tamaño del texto al 35% */
+  padding: 10px; /* Espaciado interno */
+  background-color: rgba(142, 160, 118, 0.5); /* Fondo verde semitransparente */
+  margin-right: 25px; /* Margen a la derecha para separar del contenedor de la imagen */
+  margin-left: 25px; /* Margen a la derecha para separar del contenedor de la imagen */
+  text-align: center;
+  justify-content: center;
+  width: 80px;
+  height: 30vh;
+  color: #564734; 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img {
+  flex: 0 0 40%; /* Reduce el tamaño de la imagen al 40% */
+}
+
+.img img {
+  width: 100%; /* Hace que la imagen ocupe todo el contenedor */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+.txt p{
+  align-items: center;
+ 
+}
+
+.booking img{
+ height: 150px;
+ padding: 10px;
+}
+.booking{
+  background-color: #848484;
+  margin-bottom: 20px;
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.booking p{
+  font-size: xx-large;
+  text-align: center;
+}
+hr{
+  border: solid 1px  #564734; 
+  width: 80%;
+   margin-top: 1vh; 
+   margin-bottom: 1vh;
+}
+.container a{
+  color:#564734 ;
+}
+.container a:hover{
+  color: white;
+}
+
