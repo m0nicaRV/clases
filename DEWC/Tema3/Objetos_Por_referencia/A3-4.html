@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3.4</title>
+    <!--Calcular los milisegundos hasta tu próximo cumpleaños y
+    muéstralos por pantalla.-->
+    <script>
+       
+        var fecha=new Date();
+        var cumpleaños= new Date(2025,5,1);
+        var tiempo=cumpleaños-fecha;
+        horas=parseInt(tiempo/3600000);
+        minutos=parseInt((tiempo%3600000)/60000);
+        segundos=parseInt(((tiempo%3600000)%60000)/1000);
+        milisegundos=parseInt(((tiempo%3600000)%60000)%1000);
+        dias= parseInt(horas /24);
+        horas=parseInt(horas%24);
+        meses=parseInt(dias/31);
+        dias=parseInt(dias%31); 
+        document.write(tiempo+"<br/>");
+        document.write(meses+"meses "+dias+"dias "+horas +"horas "+minutos+"minutos "+segundos+"segundos "+milisegundos+"milisegundos </br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

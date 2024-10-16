@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hola(){
+        var names=[] ;
+
+        if(names.length>3){
+    return names[0]+", "+names[1]+ "and "+(names.length-2)+" others like this";
+  }else if(names.length==3){
+    return names[0]+", "+names[1]+"and "+names[2]+" like this";
+  }else if(names.length==2){
+    return names[0]+"and "+names[1]+" like this";
+  }else if(names.length==1){
+    return names[0]+" like this";
+  }else{
+    return "no one like this";
+  }}
+  document.write(hola());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

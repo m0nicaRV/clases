@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            border-radius: 5px;
+            border:solid 1px #c6b1c9;
+            background-color: #e2d8e4;
+            font-size: x-large;
+        }
+        input:hover{
+            border:solid 3px black,
+        }
+    </style>
+    <script>
+        function deletrea(){
+            var nombre=prompt("introduce el nombre del boton");
+            var deletreo=nombre.split("");
+            document.write(deletreo.join("-")+" </br>"+deletreo.reverse().join("-"));
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <input type="submit" value="manzana" onclick="deletrea()">
+    <input type="submit" value="Pera" onclick="deletrea()">
+    <input type="submit" value="Fresa" onclick="deletrea()">
+    <input type="submit" value="Nectarina" onclick="deletrea()">
+    <input type="submit" value="Kiwi" onclick="deletrea()">
+    <input type="submit" value="Mango" onclick="deletrea()">
+    
+</body>
+</html>
