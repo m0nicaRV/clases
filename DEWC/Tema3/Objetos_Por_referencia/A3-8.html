@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dias =[
+            "Lunes",
+            "Martes",
+            "Miercoles",
+            "Jueves",
+            "Viernes",
+            "Sabado",
+            "Domingo",
+        ];
+        var laborales=[];
+        var festivos=[];
+        for (var i=0; i<dias.length;i++){
+             i>4 ? festivos[festivos.length]=dias[i] : laborales[laborales.length]=dias[i];
+        }
+        document.write("</br>Dias laborales: "+laborales.join(",  "));
+        document.write("</br>Dias festivos: "+festivos.join(",  "));
+    </script>
+    
+</body>
+</html>
