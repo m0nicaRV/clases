@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        function hola(){
-        var names=[] ;
-
-        if(names.length>3){
-    return names[0]+", "+names[1]+ "and "+(names.length-2)+" others like this";
-  }else if(names.length==3){
-    return names[0]+", "+names[1]+"and "+names[2]+" like this";
-  }else if(names.length==2){
-    return names[0]+"and "+names[1]+" like this";
-  }else if(names.length==1){
-    return names[0]+" like this";
-  }else{
-    return "no one like this";
-  }}
-  document.write(hola());
-        
+      function narcissistic() {
+        var iterable = 'AAAABBBCCDAABBB';
+        var a=[];
+        Array.isArray(iterable) && isNaN(iterable[0]) ? (iterable=iterable.join()) :  (iterable=parseInt(iterable.join())) ;
+        for(var i=0; i<iterable.length;i++){
+          iterable.charAt(i) != iterable.charAt(i+1) && (a[a.length]=iterable.charAt(i));
+        }
+       if(parseInt(a)){
+        return a.map(elemento => +elemento);
+       }return a;
+       
+   
+      }
+      narcissistic();
+      
     </script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
