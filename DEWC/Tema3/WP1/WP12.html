@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        Crear una expresión regular que permita reemplazar el símbolo dólar ($), por
+        el símbolo euro, €, en las cantidades que indiquen un valor monetario. Por
+        ejemplo: “El coste del equipo es de 90.25$ iva incluido. Se aceptan $ y €.”
+        “El coste del equipo es de 90.25€ iva incluido. Se aceptan $ y €.”*/
+
+        function cambiar(str){
+            return str.replace(/(\d)\$/g, "$1 s€");
+        }
+        document.write( cambiar("El coste del equipo es de 90.25$ iva incluido. Se aceptan $ y €."));
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

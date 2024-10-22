@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*.Crear una expresión regular que permita identificar si un número de teléfono
+        cumple con el formato establecido: 943-852-978, 943 852 978 o 943852978
+        */
+
+
+        function validartel(tel){
+            patron = /^[8-9]{1}(\d{2})[ ]?(\d{3})[ ]?(\d{3})$/;
+            patron2 = /^[8-9]{1}(\d{2})[-]?(\d{3})[-]?(\d{3})$/;
+            exprReg= new RegExp(patron);
+            exprReg2= new RegExp(patron2);
+            tel.match(exprReg) || tel.match(exprReg2) ? console.log(tel+": telefono valido") : console.log(tel+": telefono incorrecto")
+        }
+        validartel("987598456");
+        validartel("987-598-456");
+        validartel("887 598 456");
+        validartel("887 598-456");
+        validartel("587 598 456");
+        validartel("987-598-4564");
+        validartel("9875983456");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
