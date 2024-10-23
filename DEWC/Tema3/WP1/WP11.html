@@ -11,11 +11,10 @@
 
 
         function validartel(tel){
-            patron = /^[8-9]{1}(\d{2})[ ]?(\d{3})[ ]?(\d{3})$/;
-            patron2 = /^[8-9]{1}(\d{2})[-]?(\d{3})[-]?(\d{3})$/;
+            patron=/^[8-9]{1}(\d{2})((( ?\d{3}){2})|((-?\d{3}){2}))$/;
+            //patron=/^[8-9]{1}(\d{2})((-|\s)?\d{3}){2}$/
             exprReg= new RegExp(patron);
-            exprReg2= new RegExp(patron2);
-            tel.match(exprReg) || tel.match(exprReg2) ? console.log(tel+": telefono valido") : console.log(tel+": telefono incorrecto")
+            tel.match(exprReg)  ? console.log(tel+": telefono valido") : console.log(tel+": telefono incorrecto")
         }
         validartel("987598456");
         validartel("987-598-456");
