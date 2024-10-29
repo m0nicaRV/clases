@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A4-4</title>
+    <script>
+        var ventana;
+        function abrir(){
+            ventana = window.open("", "", "width=300,height=200");
+        }
+        function cambiar(){
+            x=Math.random() * window.screen.width;
+            y=Math.random() * window.screen.height;
+            ventana != null ? ventana.moveTo(x,y) : alert("Primero abre la ventana");
+
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="abrir" onclick="abrir()">
+    <input type="button" value="cambiar" onclick="cambiar()">
+    
+</body>
+</html>

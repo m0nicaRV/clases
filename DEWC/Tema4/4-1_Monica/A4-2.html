@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A4-2</title>
+    <script>
+      var ventana;
+      function abrir() {
+        ventana = window.open("http://www.jesuitasrioja.org/");
+      }
+      function cerrar() {
+        ventana != null
+          ? window.confirm("¿Quieres cerrar esta pestaña?") && ventana.close()
+          : alert("Primero abre la ventana");
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="abrir" onclick="abrir()" />
+    <input type="button" value="cerrar" onclick="cerrar()" />
+  </body>
+</html>
