@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WP7</title>
+    <script>
+        function mostrar(botton){
+            var obj=document.getElementById('txtColor');
+            if(botton.innerHTML=="Ocultar"){
+                botton.innerHTML="Mostrar";
+                obj.style.visibility="hidden";
+
+            }else{
+                botton.innerHTML="Ocultar";
+                obj.style.visibility="visible";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h3>modificacion propiedades css</h3>
+    <div>
+        <span>Caja de texto</span>
+        <input type="text" id="txtColor">
+        <button id="ocultar" onclick="mostrar(this);">Ocultar</button>
+    </div>
+    
+</body>
+</html>

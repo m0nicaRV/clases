@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WP6</title>
+    <script>
+        function modificarColor(){
+            var str= document.getElementsByTagName("p");
+            for (var a of str){
+                a.style.color=document.getElementById('cboSize').value;
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <div id="elementosTag">
+      <h3>Modificacion de color</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+        suscipit tenetur porro commodi maxime vel veritatis eum inventore velit
+        quo cum esse nostrum dolorum doloribus saepe, debitis deleniti vitae
+        tempora distinctio? Voluptatem modi, eveniet possimus cupiditate ea
+        suscipit? Hic magnam mollitia officia obcaecati veniam similique
+        temporibus omnis voluptate porro, rerum, inventore alias. Illo accusamus
+        inventore, quos ea sed exercitationem modi harum accusantium earum neque
+        eveniet aliquam unde et recusandae atque. Provident illum, sapiente quas
+        distinctio voluptatibus dolorem illo earum error sint enim nisi!
+        Laboriosam corporis amet provident explicabo fugit ea totam, quas a
+        porro. Voluptatem cum recusandae in repellat nisi!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+        suscipit tenetur porro commodi maxime vel veritatis eum inventore velit
+        quo cum esse nostrum dolorum doloribus saepe, debitis deleniti vitae
+        tempora distinctio? Voluptatem modi, eveniet possimus cupiditate ea
+        suscipit? Hic magnam mollitia officia obcaecati veniam similique
+        temporibus omnis voluptate porro, rerum, inventore alias. Illo accusamus
+        inventore, quos ea sed exercitationem modi harum accusantium earum neque
+        eveniet aliquam unde et recusandae atque. Provident illum, sapiente quas
+        distinctio voluptatibus dolorem illo earum error sint enim nisi!
+        Laboriosam corporis amet provident explicabo fugit ea totam, quas a
+        porro. Voluptatem cum recusandae in repellat nisi!
+      </p>
+    </div>
+    <div>
+        <span>Seleccionar color: </span>
+        <select id="cboSize">
+            <option value="green">Verde</option>
+            <option value="blue">Azul</option>
+            <option value="red">Rojo</option>
+        </select>
+        <button id="actualizar" onclick="modificarColor();">Cambiar</button>
+    </div>
+  </body>
+</html>

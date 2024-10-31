@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ejemplo1(){
+            var SO = navigator.plataform;
+        document.write("<h1>Documento abierto con: "+SO+"</h1>");
+        }
+        function ejemplo2(){
+            var texto= prompt("Ingresa un titulo para la nueva venatana: ");
+            var ventanaNueva= window.open();
+            ventanaNueva.document.write("<h1>"+texto+"<h1/>");
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="button" onclick="ejemplo1()" value="ejemplo1">
+    <input type="button" onclick="ejemplo2()" value="ejemplo2">
+
+    
+</body>
+</html>
