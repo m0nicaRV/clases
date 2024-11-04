@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WP9</title>
+    <script>
+        function addItemsLista(){
+            var t=document.getElementsByTagName('ul');
+            t[0].innerHTML+= "<li>"+document.getElementById('txt').value+"</li>";
+        }
+    </script>
+</head>
+<body>
+    <div id="elementosTag">
+        <h3>Lista dinamica</h3>
+        <ul></ul>
+        <hr/>
+        <div>
+            <span>Nuevo texto</span>
+            <input type="text" id="txt">
+            <button id="actualizar" onclick="addItemsLista();">Añadir</button>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WP8</title>
+    <script>
+        function recorrerTag(){
+            var p = document.getElementsByTagName("p");
+            for (var i=0;i<=p.length;i++){
+                p[i].innerHTML="Parafo posicion "+i;
+                p[i].style.color=document.getElementById('txtColor').value;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="elementosTag">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div>
+            <input type="text" id="txtColor">
+            <button id="actualizar" onclick="recorrerTag();">Modificar</button>
+        </div>
+    </div>
+    
+</body>
+</html>
