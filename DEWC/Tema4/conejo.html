@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var bucle;
+    window.onload=function(){
+         bucle=setInterval(mover2, 2000);
+    }
+    function mover(){
+        var image=document.getElementById("img");
+        width=parseInt(Math.random()*(screen.width-image.width)) ;
+        height=parseInt(Math.random()*(screen.height-image.height)) ;
+        image.style.left= width+"px";
+        image.style.top=height+"px";
+    }
+
+    function mover2(){
+        var image=document.getElementById("img");
+        width=parseInt(Math.random()*(window.innerWidth-image.width)) ;
+        height=parseInt(Math.random()*(window.innerHeight-image.height)) ;
+        image.style.left= width+"px";
+        image.style.top=height+"px";
+        document.getElementById("x").innerHTML= "X: "+width;
+        document.getElementById("y").innerHTML= "Y: "+height;
+    }
+    function parar(b){
+        if(b.value=="parar"){
+            clearInterval(bucle);
+            b.value="iniciar";   
+        }else{
+            bucle=setInterval(mover2, 2000);
+            b.value="parar";
+        }
+    }
+</script>
+<body>
+    <p id="x">X: </p>
+    <p id="y">Y: </p>
+    <img style="position:absolute; left:200px; top:500px" src="img.PNG" id="img">
+    <input type="button" onclick="parar(this)" value="parar">
+    
+</body>
+</html>
