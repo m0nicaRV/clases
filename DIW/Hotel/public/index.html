@@ -5,14 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hotel Logroño</title>
     <link href="../Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      .carousel-caption {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+      }
+      .carousel-caption .divider {
+          width: 300px;
+          height: 2px;
+          background-color: white;
+          margin: 10px auto;
+      }
+      ul.list-unstyled {
+            padding: 0;
+        }
+        ul.list-unstyled li {
+            list-style: none;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        ul.list-unstyled li:last-child {
+            border-bottom: none;
+        }
+
+        .section-blue {
+            background-color: #043171;
+            color: white;
+            padding: 20px;
+        }
+  </style>
   </head>
   <body>
     <script src="../Bootstrap/bootstrap.bundle.min.js"></script>
-    <nav
-      class="navbar navbar-expand-lg"
-      data-bs-theme="dark"
-      style="background-color: #043171"
-    >
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #043171">
+
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="../assets/logo.png" alt="Bootstrap" width="160" height="60"
@@ -32,15 +61,17 @@
 
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"  width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false" >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#555"></rect>
-            <image href="../assets/Carrousel1.jpg" width="100%" height="100%" />
-            <text x="50%" y="50%" fill="#333" dy=".3em ">DISFRUTA DE LA TRANQUILIDAD DEL HOTEL LOGROÑO</text>
-          </svg>
-        </div>
-      </div>
+          <div class="carousel-item active">
+              <img src="../assets/Carrousel1.jpg" class="d-block w-100" alt="First slide">
+              <div class="carousel-caption">
+                <div class="texto_slider text-center mt-lg-3 text-uppercase magictime swashIn">						
+                  Relájate
+                  <div class="divider"></div>
+                </div>
+                
+                <h1 class="text-center text-uppercase font-weight-light pt-2 pb-lg-5 magictime swashIn">Disfruta de la tranquilidad del Hotel Logroño</h1>
+              </div>
+          </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -50,5 +81,37 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
+    <section class="container my-5">
+      <p>El hotel Logroño posee una ubicación céntrica y tranquila, junto al Parque de San Miguel. El centro de la ciudad de Logroño, con su histórica catedral y la ancestral Muralla del Revellín, se encuentran tan solo a 20 minutos a pie. Logroño es una ciudad conocida por su vino de Rioja y sus pinchos. Irse de pinchos es casi una obligación, y la zona perfecta son los restaurantes y bares de las calles Laurel y San Juan.</p>
+      <p>La ubicación del hotel es simplemente, ideal:</p>
+      <ul class="list-unstyled" >
+        <li>A tan sólo cinco minutos en coche del Palacio de Congresos Riojaforum</li>
+        <li>Hay una parada de autobús delante del hotel</li>
+        <li>Está ubicado en la tranquila zona del parque de San Miguel</li>
+        <li>Disponemos de 108 habitaciones Standard, además de dos Junior Suites en el piso 5.</li>
+      </ul>
+
+      <p>Todas las habitaciones son muy luminosas gracias a su luz natural. La mitad de las habitaciones poseen vistas al parque y a las montañas.</p>
+      <p>En el Hotel Logroño servimos un copioso y variado desayuno buffet, que se sirve cada mañana en nuestra luminosa sala de desayunos. El Open Bar del hotel está abierto los 24 horas. O si lo prefieres puedes disfrutar de nuestro amplio lobby y área de lounge, con vistas al parque desde los ventanales.</p>
+    
+      <ul class="list-unstyled">
+        <li>Parking disponible</li>
+        <li>Ascensor panorámico</li>
+      </ul>
+    </section>
+
+    <section class="section-blue container my-5 ms-auto" style="max-width: 50%;"  data-bs-theme="dark" style="background-color: #043171">
+      <p>Disfruta de nuestras instalaciones modernas y cómodas, diseñadas para ofrecerte la mejor experiencia durante tu estancia.</p>
+      <ul class="list-unstyled">
+          <li>Wi-Fi gratuito en todo el hotel</li>
+          <li>Gimnasio totalmente equipado</li>
+          <li>Centro de negocios disponible las 24 horas</li>
+      </ul>
+  </section>
+    
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2023 Hotel Logroño. Todos los derechos reservados.</p>
+  </footer>
   </body>
 </html>
