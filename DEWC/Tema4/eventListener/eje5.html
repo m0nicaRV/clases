@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor deserunt culpa ipsa corrupti quaerat eaque, fugiat dolorum et fuga. Aliquid molestiae officiis possimus sunt accusantium voluptates, facilis animi molestias, porro architecto vel obcaecati repudiandae est sapiente officia ab. Provident est facilis eum, quaerat hic explicabo reprehenderit officia neque in suscipit.
+    <button onclick="remove()" id="btn">buton onclick</button>
+    <button id="btn2">buton listener</button>
+</div>
+<p id="demo"></p>
+
+    <script>
+        document.getElementById("myDiv").addEventListener("mousemove",move);
+        document.getElementById("btn2").addEventListener("click",remove);
+
+        function move(){
+            document.getElementById("demo").innerHTML=Math.random()*100;
+        }
+        function remove(){
+            document.getElementById("myDiv").removeEventListener("mousemove",move);
+        }
+    </script>
+</body>
+</html>
