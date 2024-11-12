@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="btn" value="click">
+    <p id="demo"></p>
+
+    <input type="button" id="btn2" value="click2">
+
+    <script>
+        var x= document.getElementById("btn");
+        x.addEventListener("mouseover", over);
+        x.addEventListener("click", click);
+        x.addEventListener("mouseout", out);
+
+        function click(){
+            document.getElementById("demo").innerHTML+="click";
+        }
+
+        function over(){
+            document.getElementById("demo").innerHTML+="over";
+        }
+
+        function out(){
+            document.getElementById("demo").innerHTML+="out";
+        }
+
+        document.getElementById("btn2").addEventListener("click", function(){
+            this.style.backgroundColor="red"});
+        
+    </script>
+    
+</body>
+</html>

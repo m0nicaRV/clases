@@ -1,0 +1,6 @@
+vagrant box add ubuntu/trusty64
+vagrant init -m ubuntu/trusty64
+vagrant up 
+conectarse --> vagrant ssh 
+destruir --> vagrant destroy 
+ps -A | grep apache2 -> numero de procesos que se estan ejecutando 

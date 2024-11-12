@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bumbling</title>
+</head>
+<body>
+    <div id="myDiv" style="background-color: red; padding: 20px;">
+        <p id="myDiv" style="background-color: white;">holas</p>
+
+
+    </div>
+    <br/>
+
+    <div id="myDiv2" style="background-color: red; padding: 20px;">
+        <p id="myDiv2" style="background-color: white;">holas</p>
+
+
+    </div>
+
+
+    <script>
+        document.getElementById("myDiv").addEventListener("click",function(){
+            alert("you clicked "+this.id);
+        },false)
+
+        document.getElementById("myP").addEventListener("click",function(){
+            alert("you clicked "+this.id);
+        },false)
+
+        document.getElementById("mydiv2").addEventListener("click",function(){
+            alert("you clicked "+this.id);
+        },true)
+
+        document.getElementById("myP2").addEventListener("click",function(){
+            alert("you clicked "+this.id);
+        },true)
+
+
+    </script>
+    
+</body>
+</html>
