@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            color: #675248;
+            background-color: #cfe7f0;
+            font-family: 'GothamRnd-Book', Helvetica, Arial, sans-serif !important;
+            background-image: url(../assets/background2.png) ; 
+        }
+        .navbar {
+            background-color: #ffffff;
+            border-radius: 70px;
+            margin-top: 20px;
+            padding: 20px;
+
+        }
+        .navbar-nav .nav-link {
+            color:  #dc3545;
+            font-weight: bold;
+        }
+        .navbar-nav a:hover{
+            color : #3a77bf;
+        }
+        .navbar-nav a.active{
+            color : #3a77bf;
+            list-style-image: url('assets/Carrousel1.png');
+        }
+       
+        footer{
+            background-image: url(../assets/footer2.png) ; 
+            background-repeat: no-repeat;
+        }
+        .facebook {
+            background-image: url(../assets/facebook.png) ;
+            background-repeat: no-repeat;
+            width: 200px
+        }
+
+    </style>
+</head>
+<body>
+    <script src="../Bootstrap/bootstrap.bundle.min.js"></script>
+    <div class="container d-flex justify-content-center ">
+        <nav class="navbar navbar-expand-lg navbar-custom ">
+            <div class="collapse navbar-collapse " id="navbarNav" >
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="../assets/Carrousel1.png" style="width: 20px;">
+                            Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="quienes_somos.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Quienes somos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">LA ESCUELA </a></li>
+                          <li><a class="dropdown-item" href="#">COMO APRENDEMOS</a></li>
+                          <li><a class="dropdown-item" href="#">DONDE JUGAMOS </a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Libro de Visitas</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header Section -->
+    <header class="p-5 text-center">
+        <img src="../assets/logo.png" alt="Logo Sol y Luna" style="width: 300px;"> <!-- Replace with actual logo image -->
+    </header>
+
+    <section class="text-center p-2">
+        <h2 class="fw-bold" style="color: #3a77bf;">QUIENES SOMOS</h2>
+    </section>
+
+    <div class="justify-content-center bg-white d-flex  ">
+        <div class="centered-div w-50">
+            <div class="container my-5 d-flex row centered-div "> 
+                
+                <h2>ESCUELA INFANTIL </h2>
+                <div class="col-md-8">
+                    <ul class="list-unstyled m-2">
+                        <li class="m-2">Sol y Luna es un Centro Educativo Infantil autorizado por la Consejería de Educación con más de 15 años de experiencia y unas características propias que nos diferencian del concepto tradicional de escuela infantil.</li>
+                        <li class="m-2">Entre otras cualidades, nos define el trato personal e individualizado de cada niño, el cuidado, la atención y el cariño hacia nuestros peques y un ambiente rico en estímulos y afectos</li>
+                        <li class="m-2">Desde aquí podéis descubrir cómo educación, profesionalidad, cariño y ambiente familiar, se pueden combinar para ofrecerle a nuestros soletes y lunitas el mejor entorno posible.</li>
+                    </ul>
+                </div>
+                <div class= "col-md-4">
+                    <img src="../assets/metodologia.png">
+                </div>
+            </div>
+            <div class="container my-5 d-flex row "> 
+                <h2>ESCUELA INFANTIL </h2>
+                <div class="col-md-8">
+                    <ul class="list-unstyled m-2">
+                        <li class="m-2">Sol y Luna cuenta con un equipo de personas capaz de ofrecer lo mejor a los más pequeños.</li>
+                        <li class="m-2">Queremos acompañaros en la importante tarea de ser padres. Por eso trabajamos siempre en complicidad con las familias.</li>
+                        <li class="m-2">Los niños son atendidos por un equipo de profesionales seleccionados cuidadosamente, con la titulación necesaria y altamente especializados.</li>
+                        <li class="m-2">Nuestro principal objetivo es desarrollar al máximo las potencialidades intelectuales de los pequeños, sin olvidar que son niños, y su aprendizaje debe basarse siempre en el juego.</li>
+                        <li class="m-2">El juego, la diversión, el cariño y el amor son nuestras bases y la profesionalidad, el trato cercano y familiar nuestro compromiso. Sabemos que trabajamos con los tesoros de la familia, por eso no solo dedicamos a ello toda nuestra capacidad profesional, sino también nuestro cariño y respeto.</li>
+                        <li class="m-2">Lo mas importante es que nos gusta y disfrutamos con nuestro trabajo y nos esforzamos cada día en hacerlo mejor</li>
+                    </ul>
+                </div>
+                <div class= "col-md-4">
+                    <img src="../assets/metodologia.png">
+                </div>
+            </div>
+
+        </div>
+        
+        
+           
+        
+    </div>
+    <div class="w-100 h-20" >
+        <a href="">
+            <img src="../assets/mapa.png">
+        </a>
+    </div>
+
+
+
+    <footer class="bg-dark text-black pt-4">
+        <div class="container my-5 d-flex centered-div justify-content-center">
+            <div class="row  ">
+                <!-- Columna 1 -->
+                <div class="col-md-4 mb-3">
+                    <p class="fw-bold">Empresa subvencionada por la Comunidad Autónoma de la Región de Murcia mediante la financiación del Gobierno de España, para el apoyo a la solvencia empresarial en respuesta a la pandemia de la COVID-19</p>
+                    <img src="../assets/logo_INFO_negro.png" style="width: 100px;">
+                </div>
+                
+                <!-- Columna 2 -->
+                <div class="col-md-4 mb-3">
+                    <p><a class="facebook" target="_blank" href="http://www.facebook.com/solylunainfantil" rel="publisher">
+                        Facebook</a>
+                    </p>
+                </div>
+                
+                <!-- Columna 3 -->
+                <div class="col-md-4 mb-3">
+                    <div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/pages/Sol-y-Luna-Escuela-Infantil/1449808075296399" data-width="280" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;container_width=290&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FSol-y-Luna-Escuela-Infantil%2F1449808075296399&amp;locale=es_ES&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false&amp;width=280"><span style="vertical-align: bottom; width: 280px; height: 130px;"><iframe name="fd34c912beed7f799" width="280px" height="1000px" data-testid="fb:like_box Facebook Social Plugin" title="fb:like_box Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.0/plugins/like_box.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df64967002cad7b3da%26domain%3Dsolylunainfantil.es%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252Fsolylunainfantil.es%252Fff57a6e39993558b6%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=290&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FSol-y-Luna-Escuela-Infantil%2F1449808075296399&amp;locale=es_ES&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false&amp;width=280" style="border: none; visibility: visible; width: 280px; height: 130px;" class=""></iframe></span></div>
+                </div>
+            </div>
+         
+            <hr class="bg-dark">
+            
+        </div>
+    </div>
+    <div class="row text-white p-5 ">
+        
+            <div class="col">
+                <p class="mb-0">&copy; Sol y Luna Escuela Infantil - Todos los derechos reservados | solylunainfantil@gmail.com</p>
+            </div>
+        </div>
+           
+    </footer>
+
+
+    
+    
+</body>
+</html>

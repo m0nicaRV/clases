@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var bucle;
+    var x=1;
+    var y=1;
+    window.onload=function(){
+         bucle=setInterval(mover, 5);
+    }
+    function mover(){
+        var image=document.getElementById("img");
+        if(image.offsetTop == window.innerHeight-image.height || image.offsetTop == image.height) y*=-1;
+        if(image.offsetLeft == window.innerWidth-image.width || image.offsetLeft == image.width)   x*=-1;
+        image.style.left= (parseInt(image.offsetLeft+x))+"px";
+        image.style.top= (parseInt(image.offsetTop+y))+"px";
+        document.getElementById("x").innerHTML= "X: "+image.style.left;
+        document.getElementById("y").innerHTML= "Y: "+image.style.top;
+    }
+    function cambiar(){
+        switch(document.getElementsByName("movimiento")[0].value){
+            case "h":
+                x=1;
+                y=0;
+                break;
+            case "v":
+                y=1;
+                x=0;
+                break;
+            case "n":
+                x=1;
+                y=1;
+                break;
+        }
+    }
+
+
+    function parar(b){
+        if(b.value=="parar"){
+            clearInterval(bucle);
+            b.value="iniciar";   
+        }else{
+            bucle=setInterval(mover, 5);
+            b.value="parar";
+        }
+    }
+</script>
+<body>
+    <p id="x">X: </p>
+    <p id="y">Y: </p>
+    <img style="position:absolute; left:200px; top:500px; width:50px" src="murci.jpg" id="img">
+    <input type="button" onclick="parar(this)" value="parar">
+    <select name="movimiento">
+        <option value="h">horizontal</option>
+        <option value="v">vertical</option>
+        <option value="n">normal</option>
+    </select>
+    <input type="button" onclick="cambiar()" value="cambiar">
+    
+</body>
+</html>

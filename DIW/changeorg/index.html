@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change.org</title>
+    <link href="Bootstrap/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background: url('assets/mapa.webp') no-repeat;
+            background-size:contain;
+            background-position: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+        .petition-card {
+            transition: transform 0.3s;
+        }
+        .petition-card:hover {
+            transform: translateY(-5px);
+        }
+        .navbar-nav .nav-link:hover {
+            color: #dc3545 !important; /* Bootstrap's danger red color */
+            transition: color 0.3s ease;
+        }
+        .carousel-inner {
+            max-width: 800px;
+            margin: auto;
+        }
+        .carousel-item {
+            display: flex;
+            align-items: center;
+            height: 300px; /* Ajusta la altura del carrusel */
+        }
+        .carousel-item img {
+            max-height: 100%;
+            object-fit: cover;
+            flex: 1;
+        }
+        .carousel-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <script src="Bootstrap/bootstrap.bundle.min.js"></script>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://static.change.org/favicons/favicon-72x72.png" alt="Change.org" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Iniciar petición</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mis peticiones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Explorar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-danger ms-2" href="#">Iniciar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-white">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">La mayor plataforma de peticiones del mundo</h1>
+            <p class="lead mb-4">498 millones de personas tomando acción. Victorias cada hora.</p>
+            <a href="#" class="btn btn-danger btn-lg px-4">Iniciar una petición</a>
+        </div>
+    </section>
+
+    <!-- Featured Petitions Carousel -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Artículos Destacados</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- Artículo 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <img src="assets/peticion.jpg" class="d-block w-100" alt="Artículo 1">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="carousel-content">
+                                    <h5 class="card-title">Título del Artículo 1</h5>
+                                    <p class="card-text">Descripción breve del artículo 1...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Artículo 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <img src="assets/peticion.jpg" class="d-block w-100" alt="Artículo 2">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="carousel-content">
+                                    <h5 class="card-title">Título del Artículo 2</h5>
+                                    <p class="card-text">Descripción breve del artículo 2...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Artículo 3 -->
+                    <div class="carousel-item">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <img src="assets/peticion.jpg" class="d-block w-100" alt="Artículo 3">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="carousel-content">
+                                    <h5 class="card-title">Título del Artículo 3</h5>
+                                    <p class="card-text">Descripción breve del artículo 3...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Sobre Change.org</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Sobre nosotros</a></li>
+                        <li><a href="#" class="text-white-50">Impacto</a></li>
+                        <li><a href="#" class="text-white-50">Empleo</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Comunidad</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Blog</a></li>
+                        <li><a href="#" class="text-white-50">Prensa</a></li>
+                        <li><a href="#" class="text-white-50">Guías</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <div class="d-flex gap-3 fs-4">
+                        <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+   
+</body>
+</html>
