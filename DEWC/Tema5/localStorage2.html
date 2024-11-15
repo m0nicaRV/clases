@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <script>
+        window.onload=function(){localStorage.getItem("cont")== null && localStorage.setItem("cont", 0);}
+        function count(){
+            num = localStorage.getItem("cont");
+            num++;
+            localStorage.setItem("cont", num)
+            document.getElementById("cont").innerHTML="Cont: "+num;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="count()" value="click me">
+    <p id="cont">Cont: </p>
+    <a href="nueva.html"  target="_blank"> Otra paguina</a>
+    
+</body>
+</html>
