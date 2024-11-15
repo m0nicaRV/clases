@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <script>
+        function guardar(){
+            nombre = document.getElementById("nombre").value;
+            apellido = document.getElementById("apellido").value;
+            localStorage.setItem("nombre", nombre);
+            localStorage.setItem("apellido", apellido);
+            document.getElementById("nombre").value="";
+            document.getElementById("apellido").value="";
+        }
+        function cargar(){
+            nombre=localStorage.getItem('nombre');
+            apellido = localStorage.getItem('apellido');
+            document.getElementById("pN").innerHTML="Nombre almacenado: "+nombre;
+            document.getElementById("pA").innerHTML="Apellido almacenado: "+apellido;
+        }
+
+        
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="apellido" placeholder="Apellido">
+        <input type="button" value="Guardar" onclick="guardar()">
+    </form>
+    <hr>
+    <p id="pN">Nombre alamcenado:</p>
+    <p id="pA">Apellido almacenado:</p>
+    <input type="button" value="cargar elementos" onclick="cargar()">
+    
+</body>
+</html>
