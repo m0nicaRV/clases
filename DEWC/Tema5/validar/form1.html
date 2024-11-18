@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador form</title>
+   
+</head>
+<body>
+    <form id="form">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+
+    <script>
+        const form = document.getElementById('form');
+        const emailInput = document.getElementById('email');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = emailInput.value;
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (regex.test(email)) {
+                form.submit();
+                alert('Formulario enviado correctamente');
+            } else {
+                alert('Correo inválido, por favor introduzca uno valido');
+            }
+        });
+    </script>
+
+
+</body>
+</html>
