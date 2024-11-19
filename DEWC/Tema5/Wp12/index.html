@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .green{
+            color:green;
+        }
+    </style>
+    <script>
+        /*Define una aplicación web que te permita añadir usuarios a una lista junto con
+        su edad. Aquellos usuarios mayores de edad pero menores de 65 deberán
+        tener un color de letra verde, mientras que los mayores de 65 años
+        presentarán un color rojo. El resto de usuarios presentarán el color por
+        defecto definido en el documento*/
+
+
+        function lista(){
+            edad=document.getElementById('edad').value;
+            nombre=document.getElementById('nombre').value;
+            list=document.getElementById('lista');
+            console.log(edad+","+nombre);
+            if(edad <18){
+                list.innerHTML+="<li> Nombre :"+nombre+" edad: "+edad+"</li>";
+            }else if(edad <65){
+                 list.innerHTML+="<li class='green'> Nombre :"+nombre+" edad: "+edad+"</li>";
+            }else{
+                list.innerHTML+="<li class='red'> Nombre :"+nombre+" edad: "+edad+"</li>";
+            }
+
+           
+                   
+
+
+            
+        }
+    </script>
+</head>
+<body>
+    <p>Nombre: </p>
+    <input type="text" id="nombre">
+    <p>Edad: </p>
+    <input type="number" id="edad">
+    <input type="submit" onclick="lista()" value="guardar">
+
+    <ul id="lista">
+
+    </ul>
+    
+</body>
+</html>

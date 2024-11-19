@@ -24,28 +24,17 @@
         var formulario = document.getElementById('form');
 
         formulario.addEventListener('submit', function(event) {
+            message="";
             event.preventDefault();
             correo = document.getElementById('email').value;
             dni = document.getElementById('dni').value;
             telefono = document.getElementById('tel').value;
 
-            if (!validarCorreo(correo)) {
-                alert('Correo inválido');
-                return;
-            }
-
-            if (!validarDNI(dni)) {
-                alert('DNI inválido');
-                return;
-            }
-
-            if (!validarTelefono(telefono)) {
-                alert('Teléfono inválido');
-                return;
-            }
-
-            formulario.submit();
-            alert('Formulario enviado.');
+            if (!validarCorreo(correo))  message+='Correo inválido';
+            if (!validarDNI(dni))  message+='DNI inválido';
+            if (!validarTelefono(telefono))  message+='Teléfono inválido';
+               
+            message != "" ? formulario.submit() : alert(message);
         });
 
         function validarCorreo(correo) {

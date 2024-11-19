@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type='text/css'>
+		article {
+			transition: left 1s;
+		}
+
+		.next,
+		.prev,
+		.current {
+			position: absolute;
+			width: 100px;
+			color: white;
+			line-height: 100px;
+			text-align: center;
+		}
+
+		article.next {
+			z-index: 1;
+			top: 20px;
+			left: 20px;
+
+		}
+
+		article.prev {
+			z-index: 2;
+			top: 60px;
+			left: 60px;
+
+		}
+
+		article.current {
+			z-index: 3;
+			top: 100px;
+			left: 100px;
+
+		}
+		article.next2{
+			z-index: 4;
+			top: 100px;
+			left: 100px;
+		}
+
+		div#slide {
+			position: relative;
+			margin: 0 auto;
+			width: calc(100%/3);
+		}
+	</style>
+	<script>
+		var clases=["prev", "current", "next", "next2"];
+		window.onload=function(){
+			stop=setInterval(desplazar,2000);
+		}
+	
+
+		
+			function desplazar() {
+				var article =document.querySelectorAll("#slide article");
+				ult=clases[clases.length-1];
+				for (var i=0; i<=clases.length-1;i++){
+					resto=clases[i];     
+					clases[i]=ult;	
+					ult=resto;
+				}
+				for (var i=0; i<article.length;i++){
+					article[i].removeAttribute("class");
+					article[i].classList.add(clases[i]);
+				}
+				
+
+				
+			}
+		
+	</script>
+
+</head>
+
+<body>
+	<div id="slide">
+		<article class="prev"><img src="firstimage.jpg" /></article>
+		<article class="current"><img src="secondimage.jpg" width="200px"/></article>
+		<article class="next"><img src="thirdimage.jpg" /></article>
+		<article class="next2"><img src="img.PNG" /></article>
+
+	</div>
+</body>
+
+</html>
