@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        tr:nth-child(2n+1){
+            background-color: #eefffe;
+        }
+    </style>
+
+    <script>
+        window.onload=function(){
+            const row = document.getElementsByTagName("tr");
+            for (var i=1; i< row.length;i++){
+                row[i].addEventListener("click",borrar);
+            }
+
+        function borrar(){
+            this.remove();
+            
+        }
+
+        }
+           
+    </script>
+</head>
+<body>
+    <table id="mixed">
+        <tbody>
+            <tr>
+                <th>Value One</th>
+                <th>Value two</th>
+                <th>Value three</th>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>123.45</td>
+                <td>apple</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>65</td>
+                <td>banana</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>1034.99</td>
+                <td>cherry</td>
+                <td>false</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="result"></div>
+    
+</body>
+</html>

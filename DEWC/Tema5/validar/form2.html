@@ -30,27 +30,22 @@
             dni = document.getElementById('dni').value;
             telefono = document.getElementById('tel').value;
 
-            if (!validarCorreo(correo))  message+='Correo inválido';
-            if (!validarDNI(dni))  message+='DNI inválido';
-            if (!validarTelefono(telefono))  message+='Teléfono inválido';
+            if (!validar( /^[^\s@]+@[^\s@]+\.[^\s@]+$/, correo))  message+='Correo inválido<br>';
+            if (!validar( /^\d{8}[A-Z]$/, dni))  message+='DNI inválido';
+            if (!validar(/^\d{9}$/ ,telefono))  message+='Teléfono inválido';
+
+            
                
-            message != "" ? formulario.submit() : alert(message);
+            message == "" ? formulario.submit() : alert(message);
         });
 
-        function validarCorreo(correo) {
-            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return regex.test(correo);
-        }
+      
 
-        function validarDNI(dni) {
-            var regex = /^\d{8}[A-Z]$/;
+        function validar(regex, dni) {
             return regex.test(dni);
         }
 
-        function validarTelefono(telefono) {
-            var regex = /^\d{9}$/;
-            return regex.test(telefono);
-        }
+       
     </script>
 
     

@@ -24,14 +24,12 @@
             edad=document.getElementById('edad').value;
             nombre=document.getElementById('nombre').value;
             list=document.getElementById('lista');
-            console.log(edad+","+nombre);
-            if(edad <18){
-                list.innerHTML+="<li> Nombre :"+nombre+" edad: "+edad+"</li>";
-            }else if(edad <65){
-                 list.innerHTML+="<li class='green'> Nombre :"+nombre+" edad: "+edad+"</li>";
-            }else{
-                list.innerHTML+="<li class='red'> Nombre :"+nombre+" edad: "+edad+"</li>";
-            }
+
+            nuevo=document.createElement('li');
+            nuevo.innerHTML= nombre+", "+edad+" años."
+            edad >=18 && edad <=65 && nuevo.classList.add("green");
+            edad >18 && edad >65 && nuevo.classList.add("red");
+            list.appendChild(nuevo);
 
            
                    
