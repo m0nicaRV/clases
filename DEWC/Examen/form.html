@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validator</title>
+    
+</head>
+<body>
+    <form id="form">
+        <label for="nombre">nombre: </label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="dni">password: </label>
+        <input type="password" id="pass" name="pass" required min="6">
+        <br>
+
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        var formulario = document.getElementById('form');
+
+        formulario.addEventListener('submit', function(event) {
+            message="";
+            event.preventDefault();
+            nombre = document.getElementById('nombre').value;
+            pass = document.getElementById('pass').value;
+            console.log(pass);
+           
+
+            if (!validar( /^[A-Z]{1}[a-z]+\s+[a-z]+$/, nombre))  message+='nombre invalido';
+            if (!validar( /^(\d)+[a-z]+[A-Z]+[#,?,¿]+$/, pass))  message+='password inválido';
+
+            
+               
+            message == "" ? formulario.submit() : alert(message);
+        });
+
+      
+
+        function validar(regex, dni) {
+            return regex.test(dni);
+        }
+
+       
+    </script>
+
+    
+</body>
+</html>

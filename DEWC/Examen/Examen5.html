@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .task-list {
+        margin-top: 20px;
+    }
+    .task-item {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+        justify-content: space-between;
+    }
+    .task-item input[type="checkbox"] {
+        margin-right: 10px;
+    }
+    .delete-btn {
+        margin-left: 10px;
+        color: red;
+        cursor: pointer;
+        font-size: 18px;
+        border: none;
+        background: none;
+    }
+    .delete-btn:hover {
+        color: darkred;
+    }
+    .fade-out {
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+    }
+    @keyframes shrink {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0.8);
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <input type="text" id="taskInput" placeholder="Escribe una tarea">
+    <button id="addTaskBtn">Añadir Tarea</button>
+    <ul class="task-list" id="taskList"></ul>
+   
+
+    <script src="script5_alumnos.js"></script>
+</body>
+</html>

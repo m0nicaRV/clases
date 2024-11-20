@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-gap: 10px;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            background-color: #007bff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .card img {
+            display: none;
+            width: 80px;
+            height: 80px;
+        }
+        .card.revealed img {
+            display: block;
+        }
+        .card.matched {
+            background-color: #28a745;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="board" id="board">
+        
+    </div>
+    <input type="button" onclick="resetBoard()" value="finalizar">
+
+    
+
+    <script src="script6_alumnos.js"></script>
+</body>
+</html>
